@@ -11,39 +11,41 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <%= form.text_field :first_name, class:"form-control", placeholder:"First Name"  %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+    <%= form.text_field :last_name, class:"form-control" , placeholder:"Last Name"   %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :email %>
-    <%= form.text_field :email %>
+   <%= form.text_field :email, class:"form-control", placeholder:"Email"   %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :phone %>
-    <%= form.text_field :phone %>
+    <%= form.text_field :phone, class:"form-control", placeholder:"Phone"  %>
   </div>
 
-  <div class="field">
+
+  <div class="field form-group">
     <%= form.label :socialmedia %>
-    <%= form.text_field :socialmedia %>
+    <%= form.text_field :socialmedia, class:"form-control",placeholder:"Any social media name"  %>
+ 
   </div>
 
-  <div class="field">
+   <div class="field form-group">
     <%= form.label :city %>
-    <%= form.text_field :city %>
+    <%= form.text_field :city, class:"form-control", placeholder:"City"  %>
   </div>
 
-  <div class="field">
+   <div class="field form-group">
     <%= form.label :country %>
-    <%= form.text_field :country %>
+    <%= form.text_field :country, class:"form-control", placeholder:"Country"  %>
   </div>
 
   <div class="actions">
