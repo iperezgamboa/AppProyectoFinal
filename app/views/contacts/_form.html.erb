@@ -48,6 +48,10 @@
     <%= form.text_field :country, class:"form-control", placeholder:"Country"  %>
   </div>
 
+  <div>
+    <%= form.number_field :user_id, id: :friend_user_id, class:"form-control", value: current_user.id, type: :hidden  %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
