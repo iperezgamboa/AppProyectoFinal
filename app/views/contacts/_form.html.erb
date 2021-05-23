@@ -10,6 +10,10 @@
       </ul>
     </div>
   <% end %>
+  
+<div class="card">
+ <div class="card-body">
+  <%= current_user.id %>
 
   <div class="field form-group">
     <%= form.label :first_name %>
@@ -49,10 +53,13 @@
   </div>
 
   <div>
-    <%= form.number_field :user_id, id: :friend_user_id, class:"form-control", value: current_user.id, type: :hidden  %>
+    <%= form.number_field :user_id, id: :contact_user_id, class:"form-control", value: current_user.id, type: :hidden  %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+ </div>
+</div>

@@ -1,47 +1,52 @@
 
-
+<div class="card">
+  <div class="card-header">
 <h1>My contact list </h1>
 <br>
-<table class="table table-striped table-bordered table-hover ">
-   <thead class="table-dark">
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Socialmedia</th>
-      <th>City</th>
-      <th>Country</th>
-      <th>User_id</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  </div>
+<div class="card-body">
+    <table class="table table-striped table-bordered table-hover ">
+      <thead class="table-dark">
+        <tr>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Socialmedia</th>
+          <th>City</th>
+          <th>Country</th>
+          <th>User_id</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @contacts.each do |contact| %>
-    <% if contact.user == current_user %>
-      <tr>
-        <td><%= contact.first_name %></td>
-        <td><%= contact.last_name %></td>
-        <td><%= contact.email %></td>
-        <td><%= contact.phone %></td>
-        <td><%= contact.socialmedia %></td>
-        <td><%= contact.city %></td>
-        <td><%= contact.country %></td>
-        <td><%= contact.user_id %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+      <tbody>
+        <% @contacts.each do |contact| %>
+        <% if contact.user == current_user %>  
+          <tr>
+            <td><%= contact.first_name %></td>
+            <td><%= contact.last_name %></td>
+            <td><%= contact.email %></td>
+            <td><%= contact.phone %></td>
+            <td><%= contact.socialmedia %></td>
+            <td><%= contact.city %></td>
+            <td><%= contact.country %></td>
+            <td><%= contact.user_id %></td>
+            <td><%= link_to 'Show', contact %></td>
+            <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+            <td><%= link_to 'Delete', contact, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn" %></td>
+          </tr>
+        <% end %>
+      <% end %>
+      </tbody>
+    </table>
 
-    <% end %>
-  </tbody>
-</table>
 
+    <br>
 
-<br>
+    <%= link_to 'New Contact', new_contact_path, class:'btn btn-info' %>
 
-<%= link_to 'New Contact', new_contact_path, class:'btn btn-info' %>
+    <h1></h1>
 
-<h1></h1>
+  </div>
+</div>
