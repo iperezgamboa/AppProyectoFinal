@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+
+
 
 <div class="card">
   <div class="card-header">
@@ -9,11 +10,7 @@
 <div class="card-body">
     <table class="table table-striped table-bordered table-hover ">
       <thead class="table-dark">
-    <tr>
-      <th>To do Item</th>
-      <th>State of the task Completed or not</th>
-      <th colspan="3"></th>
-    </tr>
+   
   </thead>
 
   <tbody>
@@ -21,20 +18,23 @@
       
       <% if list.completed %>
       <tr class ="table-warning">
-        <td class="striker"><%= list.description %></td>
-        <td><%= list.completed %></td>
-        <td><%= link_to 'Show', list %></td>
-        <td><%= link_to 'Edit', edit_list_path(list) %></td>
-        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="striker"><%= link_to list.description, edit_list_path(list) %> <% list.description %></td>
+        <td>
+           
+            <% link_to 'Show', list %>
+            <% link_to 'Edit', edit_list_path(list) %>
+            <%= link_to 'Delete', list, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        </td>
       </tr>
       <% else %>
 
       <tr>
-        <td><%= list.description %></td>
-        <td><%= list.completed %></td>
-        <td><%= link_to 'Show', list %></td>
-        <td><%= link_to 'Edit', edit_list_path(list) %></td>
-        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to list.description, edit_list_path(list) %><% list.description %></td>
+        <td>             
+            <% link_to 'Show', list %>
+            <% link_to 'Edit', edit_list_path(list) %>
+            <%= link_to 'Delete', list, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        </td>
       </tr>
 
      <% end %>
