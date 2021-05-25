@@ -12,14 +12,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
+<div class="card">
+    <div class="card-body">
+        <div class="field form-group">        
+            <% f.label :description %> <br/>
+            <%= f.text_field :description %>
+        </div>
 
+        <div class="actions form-group">
+            <%= f.submit "Add To do Activity", class: "btn btn-info" %>
+        </div>
+    <% end %>
 
+    <br>
+    <%= link_to 'Delete Marked Items', home_trashall_path, data: { confirm: 'Are you sure?'}, class: "btn btn-success"  %>
+    <%= link_to 'Delete All your daily activities', home_trashthemall_path, data: { confirm: 'Are you sure?'}, class: "btn btn-success"  %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+ </div>
+</div>
