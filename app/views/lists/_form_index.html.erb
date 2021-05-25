@@ -14,19 +14,17 @@
 
 <div class="card">
     <div class="card-body">
-        <div class="field form-group">        
+        <div class="field form-group ">        
             <% f.label :description %> <br/>
-            <%= f.text_field :description %>
+            <%= f.text_field :description, placeholder: "Write your task here" %>
+            <%= f.submit "Add an Activity", class: "btn btn-info" %>
         </div>
 
         <div class="actions form-group">
-            <%= f.submit "Add To do Activity", class: "btn btn-info" %>
+           
+            <%= link_to 'Delete activities finished', home_trashall_path, data: { confirm: 'Are you sure?'}, class: "btn btn-success"  %>
+            <%= link_to 'Delete All your activities', home_trashthemall_path, data: { confirm: 'Are you sure?'}, class: "btn btn-success"  %>
         </div>
     <% end %>
-
-    <br>
-    <%= link_to 'Delete Marked Items', home_trashall_path, data: { confirm: 'Are you sure?'}, class: "btn btn-success"  %>
-    <%= link_to 'Delete All your daily activities', home_trashthemall_path, data: { confirm: 'Are you sure?'}, class: "btn btn-success"  %>
-
  </div>
 </div>
