@@ -1,8 +1,8 @@
 
 <div class="card">
   <div class="card-header">
-<h1>My contacts </h1>
-<br>
+    <h1>My contacts </h1>
+    <br>
   </div>
 <div class="card-body">
     <table class="table table-striped table-bordered table-hover ">
@@ -15,6 +15,8 @@
           <th>Instagram/facebook</th>
           <th>City</th>
           <th>Country</th>
+          <th>Charge</th>
+          <th>Industry</th>
           <th>User_id</th>
           <th colspan="3"></th>
         </tr>
@@ -31,6 +33,8 @@
             <td><%= contact.socialmedia %></td>
             <td><%= contact.city %></td>
             <td><%= contact.country %></td>
+            <td><%= contact.charge %></td>
+            <td><%= contact.industry %></td>
             <td><%= contact.user_id %></td>
             <td><%= link_to 'Show', contact %></td>
             <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
@@ -41,13 +45,9 @@
       </tbody>
     </table>
 
-
     <br>
 
     <%= link_to 'Add a New Contact', new_contact_path, class:'btn btn-info' %>
-     <%= link_to 'Delete All your Contacts', new_contact_path, class:'btn btn-danger' %>
-
-    <h1></h1>
-
-  </div>
+    <%= link_to 'Delete All your Contacts', new_contact_path, class:'btn btn-danger' %>
+  
 </div>

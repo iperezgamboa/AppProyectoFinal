@@ -52,6 +52,16 @@
     <%= form.text_field :country, class:"form-control", placeholder:"Country"  %>
   </div>
 
+  <div class="field form-group">
+    <%= form.label :charge %>
+    <%= form.text_field :charge, class:"form-control", placeholder:"Charge"  %>
+  </div>
+
+    <div class="field form-group">
+    <%= form.label :industry %>
+    <%= form.text_field :industry, class:"form-control", placeholder:"Industry"  %>
+  </div>
+
   <div>
     <%= form.number_field :user_id, id: :contact_user_id, class:"form-control", value: current_user.id, type: :hidden  %>
   </div>
