@@ -23,7 +23,7 @@
           <%= form_for(list) do |f| %>
             <%= f.text_field :description, type: 'hidden' %>
             <%= f.check_box :completed, :checked => false, :style => 'visibility: hidden' %>
-            <%= f.submit "Uncross", class: 'btn btn-outline-primary' %>
+            <%= f.submit "Done", class: 'btn btn-outline-primary' %>
           <% end %>
         </td>
         <td>          
@@ -40,7 +40,7 @@
           <%= form_for(list) do |f| %>
             <%= f.text_field :description, type: 'hidden' %>
             <%= f.check_box :completed, :checked => true, :style => 'visibility: hidden' %>
-            <%= f.submit "Cross Off", class: 'btn btn-outline-secondary' %>
+            <%= f.submit "To do", class: 'btn btn-outline-secondary' %>
           <% end %>
         </td>
         <td>             

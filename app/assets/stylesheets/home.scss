@@ -92,7 +92,7 @@ h4 {
 
 .navbar {
   margin-bottom: 0;
-  background-color: #faf7f6;
+  background-color: #f5f1f0;
   z-index: 9999;
   border: 0;
   font-size: 13px !important;
@@ -105,8 +105,8 @@ h4 {
   color: rgb(7, 5, 5) !important;
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
-  color: #f4511e !important;
-  background-color: #fff !important;
+  color: #fa7244!important;
+  background-color: rgb(255, 168, 37) !important;
 }
 .navbar-default .navbar-toggle {
   border-color: transparent;
@@ -156,3 +156,4 @@ h4 {
     font-size: 150px;
   }
 }
+

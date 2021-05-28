@@ -1,11 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-green bg-green">
+  <div class="container">
+  <a class="navbar-brand" href="/"><%=image_tag('appmarcadores.png', size: "50x40")%></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
    
     <%= link_to 'AppProyectoFinal', root_path, class: "navbar-brand"%>
-    
-    <%= link_to 'HOME', root_path, class: "navbar-brand"%>
-
-    <%= link_to 'Prices', home_prices_path, class: "navbar-link"%>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -13,44 +14,52 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       <li class="nav-item mr-3">  
         
         <% if user_signed_in? %>
 
           <li class="nav-item">
-          <%= link_to  "My Contact List", contacts_path, class:"nav-link" %>
-      
-          </li>
-
-          <li class="nav-item">
-          <% link_to  "agregar Contactos", new_contact_path, class:"nav-link" %>
+          <%= link_to  "My Contacts", contacts_path, class:"nav-link" %>
           </li>
 
           <li class="nav-item">
           <%= link_to  "My To do List", lists_path, class:"nav-link" %>
           </li>
+          
+          <li class="nav-item">
+          <%= link_to 'Crypto currencies', home_prices_path, class: "nav-link"%>
+          </li>
 
+          <li class="nav-item">
+          <% link_to  "agregar Contactos", new_contact_path, class:"nav-link" %>
+          </li>
+          
           <li class="nav-item">
             <%= link_to  "Edit my profile", edit_user_registration_path, class:"nav-link" %>
           </li>  
         
           <li class="nav-item">
             <%= link_to  "Sign out", destroy_user_session_path, method: :delete, class:"nav-link" %>
-          </li>
-
-         
+          </li>         
         
         <% else %>
         
           <li class="nav-item">
+          <button type="button" class="btn btn-warning">
             <%= link_to  "Sign up", new_user_registration_path, class:"nav-link" %>
+          </button>
           </li>
-          
+          <tr>
+                        
           <li class="nav-item">
+           <button type="button" class="btn btn-warning">
             <%= link_to  "Log in", new_user_session_path, class:"nav-link" %>
+          </button>
           </li>
 
         <% end %>               
       </ul>
     </div>
   </div>
+  
 </nav>
